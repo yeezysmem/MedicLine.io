@@ -13,10 +13,11 @@ gulp.task('clean', async function(){
 })
 
 gulp.task('scss', function(){
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('./scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(gulp.dest('./css'))
     .pipe(autoprefixer({
-      browsers: ['last 8 versions']
+      browsers: ['overrideBrowserslist']
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
@@ -27,6 +28,8 @@ gulp.task('css', function(){
   return gulp.src([
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/animate.css/animate.css',
+    
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -45,7 +48,8 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
   return gulp.src([
-    'node_modules/slick-carousel/slick/slick.js'
+    'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/wow.js/dist/wow.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

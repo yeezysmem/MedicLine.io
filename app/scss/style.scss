@@ -1,9 +1,66 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "gloval";
 
-
-
+.header{
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign_in-btn {
+    border: none;
+    background:none;
+    width: 80px;
+    height: 55px;
+    text-align: center;
+    font-size: 16px;
+    color: #4E5983;
+}
+.sign_up-btn {
+    border: none;
+    width: 157px;
+    height: 55px;
+    text-align: center;
+    font-size: 16px;
+    color: #FFB0B1;
+    background: rgba(#FF677D, 0.11);
+    border-radius: 9px;
+    font-weight: 600;
+    line-height: 19px;
+    
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    a{
+        padding-right: 43px;
+        color: #4E5983;
+        
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    
+    
+}
+.main-banner{
+    margin-top: 50px;
+}
+.carousel-indicators{
+    li{
+      background-color: #FF677D;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+  }
 
 
 @import "media";
