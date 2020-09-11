@@ -5,14 +5,23 @@ $(function(){
       infinite: true,
       speed: 500,
       fade: true,
-      cssEase: 'linear'
+      cssEase: 'linear',
+      autoplay:true,
+      autoplaySpeed: 1000
       });
 
       $('.card').slick({
         lazyLoad: 'ondemand',
+        dots: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: false
+      });
+      
+      $('.about-flex').slick({
+        lazyLoad: 'ondemand',
+        dots: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
       });
 
 
