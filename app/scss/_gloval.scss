@@ -7,7 +7,7 @@ html{
 
 body{
     font-weight: 400;
-    color: #4E5983;
+    color: $p-color;
     font-family: 'Rubik', sans-serif;
     font-size: 16px;
 }
@@ -15,7 +15,7 @@ body{
 a {
     
     text-decoration: none;
-    color:  #4E5983;
+    color:  $p-color;
   }
   ul,
   li{
@@ -29,210 +29,23 @@ a {
     max-width: 1170px;
     margin: auto;
   }
-/* Слайдер */ 
-.slick-slider{} 
-/* Слайдер запущен */
-.slick-slider.slick-initialized{}
-/* Слайдер с точками */ 
-.slick-slider.slick-dotted{}	
- /* Ограничивающая оболочка */
-.slick-list {}
-/* Лента слайдов */ 
-.slick-track{}
-/* Слайд */ 
-  .slick-slide{} 
-/* Слайд активный (показывается) */ 
-  .slick-slide.slick-active{} 
-/* Слайд основной */ 
-  .slick-slide.slick-current{} 
-/* Слайд по центру */ 
-  .slick-slide.slick-center{} 
-/* Клонированный слайд */ 
-  .slick-slide.slick-cloned{}
-/* Стрелка */ 
-  .slick-arrow{} 
-/* Стрелка влево */ 
-  .slick-arrow.slick-prev{} 
-/* Стрелка вправо */ 
-  .slick-arrow.slick-next{} 
-/* Стрелка не активная */ 
-  .slick-arrow.slick-disabled{}
-/* Точки (булиты) */ 
-  .slick-dots{} .slick-dots li{} 
-/* Активная точка */ 
-  .slick-dots li.slick-active{} 
-/* Элемент точки */ 
-  .slick-dots li button{} 
-
-
-  .view {
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-
-    cursor: default;
-    
-  }
-  .view .mask,
-  .view .content {
-    border-radius: 15px;
-    width: 360px;
-    height: 297px;
+// FOR ALL ARROWS \\
+.slick-arrow{
+  border: none;
     position: absolute;
-    overflow: hidden;
-    bottom: 0;
-    left: 0
-  }
-  
-  .view img {
-    display: block;
-    position: relative
-  }
-  
-  .view h2 {
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 24px;
-    line-height: 28px;
-    padding: 10px;
-    margin: 20px 0 0 0
-  }
-  
-  .view p {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-
-    color: #3F3D56;
-    position: relative;
-    padding: 0px 20px 0px;
-  }
-  
-  .view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-
-
-  }
-  
-  
-  
-  
-  /*1*/
-  
-  .view-first img {
-    /*1*/
-    
-    transition: all 0.2s linear;
-    width: 360px;
-    height: 297px;
-  }
-  
-  .view-first .mask {
-    opacity: 0;
-    background: rgba(255, 103, 125, 0.58);
-    transition: all 0.4s ease-in-out;
-  }
-  
-  .view-first h2 {
-    transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .view-first p {
-    transform: translateY(100px);
-    opacity: 0;
-    transition: all 0.2s linear;
-  }
-  
-  .view-first a.info {
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  
-  /* */
-  
-  .view-first:hover img {
-    -webkit-filter: blur(2px);
-    filter: blur(2px);
-    transform: scale(1.1);
-  }
-  
-  .view-first:hover .mask {
-    opacity: 1;
-  }
-  
-  .view-first:hover h2,
-  .view-first:hover p,
-  .view-first:hover a.info {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  
-  .view-first:hover p {
-    transition-delay: 0.1s;
-  }
-  
-  .view-first:hover a.info {
-    transition-delay: 0.2s;
-  }
-  
-  
-
-
-
-  .flex{
-   text-align: center;
-   a{
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    
-    color: #160647;
-   }
-  }
-  ::-webkit-input-placeholder {color:#160647;}
-  ::-moz-placeholder          {color:#160647;}/* Firefox 19+ */
-  :-moz-placeholder           {color:#160647;}/* Firefox 18- */
-  :-ms-input-placeholder      {color:#160647;}
-  
-
-  input[type=text], input[type=password] {
-    width: 280px;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: 2px solid #160647;
-    background: none;
-    border-radius: 10px;
-    
-  }
-  
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: none;
-    outline: none;
-
-  }
-  
-
-  
-  /* Set a style for the submit/register button */
-  .registerbtn {
-    border-radius: 50px;
-    background-color: #fff;
-    color: #160647;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 284px;
-  }
-  
-  .registerbtn:hover {
-    opacity: 0.9;
-  }
-  
+    top: -25%;
+    z-index: 20;
+    font-size: 0;
+}
+.slick-arrow.slick-prev{
+    width: 37px;
+    height: 16px;
+    right: 86px;
+    background: url(../images/arrow-left.svg);
+}
+.slick-arrow.slick-next{
+    width: 72px;
+    height: 16px;
+    right: 0;
+    background: url(../images/arrow-right.svg);
+}
