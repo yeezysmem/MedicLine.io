@@ -5482,24 +5482,88 @@ li {
     -webkit-box-direction: reverse;
         -ms-flex-flow: column-reverse;
             flex-flow: column-reverse;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    margin: 0 auto;
+  }
+  .footer .footer-content .footer-content__info {
+    margin: 0 auto;
+  }
+  .footer .footer-content .footer-content__info-adress {
+    margin: 0 auto;
+  }
+  .footer .footer-content__reg {
+    margin: 0 auto;
   }
   .footer .footer-content__video {
     display: none;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 720px) {
   .container {
-    width: 308px;
+    width: 660px;
+  }
+  .wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header-btns {
+    display: none;
+  }
+  .banner-content__title {
+    font-size: 34px;
+  }
+  .banner-content__subtitle {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .container {
+    width: 600px;
+  }
+  .wrapper .menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 420px;
+  }
+  .card .card-item {
+    width: 200px;
+    height: 300px;
+  }
+  .card .card-item__title {
+    margin-top: 12px;
+  }
+  .card .card-item img {
+    width: 184px;
+    height: 236px;
+  }
+  .card .slick-slide {
+    margin: 0 98px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 375px;
   }
   .menu {
     display: none;
-  }
-  .mobile-header {
-    background: #FFDCDC;
-    width: 100vw;
   }
   .banner {
     margin-top: 0;
@@ -5601,6 +5665,18 @@ li {
     font-size: 22px;
     font-weight: bold;
     line-height: 21px;
+  }
+  .footer .footer-content .footer-content__info-adress {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 308px;
+  }
+  .footer .footer-content__reg {
+    width: 308px;
   }
 }
 /*# sourceMappingURL=style.css.map */

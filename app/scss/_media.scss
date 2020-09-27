@@ -210,7 +210,7 @@
         }
         .slick-slide{
             margin: 0 50px;
-    }
+        }
     }
 }
 
@@ -364,7 +364,17 @@
         .footer-content{
             display: flex;
             flex-flow: column-reverse;
-            align-content: center;
+            margin: 0 auto;
+           
+            .footer-content__info{
+                margin: 0 auto; 
+                &-adress{
+                    margin: 0 auto;
+                }
+            }
+            &__reg{
+                margin: 0 auto;
+            }
             
             
         }
@@ -379,19 +389,75 @@
     
 
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width:720px){
     .container{
-        width: 308px;
+        width: 660px;
+    }
+    .wrapper{
+        justify-content: space-around;
+    }
+    .header-btns{
+        display: none;
+    }
+    .banner-content__title{
+        font-size: 34px;
+    }
+    .banner-content__subtitle{
+        font-size: 19px;
+    }
+}
+@media screen and(max-width:660px){
+    .container{
+        width: 600px;
+    }
+    .wrapper{
+        .menu{
+            display: none;
+        }
+    }
+
+}
+@media screen and (max-width:600px){
+    .container{
+        width: 540px;
+    }
+}
+@media screen and (max-width:540px){
+    .container{
+        width: 480px;
+    }
+}
+@media screen and (max-width:480px){
+    .container{
+        width: 420px;
+    }
+    .card{
+        .card-item{
+            &__title{
+                margin-top: 12px;
+            }
+            width: 200px;
+            height: 300px;
+            img{
+                width: 184px;
+                height: 236px;
+            }
+        }
+        .slick-slide{
+            margin: 0 98px;
+        }
+    }
+}
+@media screen and (max-width: 420px){
+    .container{
+        width: 375px;
     }
     .menu{
         display: none;
     }
 
 
-    .mobile-header{
-        background: #FFDCDC;
-        width: 100vw;
-    }
+
     .banner{
         margin-top: 0;
         border-radius: 0;
@@ -508,11 +574,25 @@
         }
     }
     .footer{
-        &__reg{
-           
-            
+        .footer-content{
+            .footer-content__info{
+                &-adress{
+                    text-align: left;
+                }
+            }
         }
     }
+}
+@media screen and (max-width: 375px){
+    .container{
+        width: 308px;
+    }
+    .footer{
+        .footer-content__reg{
+            width: 308px;
+        }
+    }
+
 
     
 
