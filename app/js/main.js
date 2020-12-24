@@ -1,3 +1,5 @@
+
+
 $(function(){
     $('.banner-slider').slick({
       arrows:false,
@@ -74,3 +76,4 @@ $(function(){
 
   
 });
+
